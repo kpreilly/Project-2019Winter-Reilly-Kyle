@@ -1,43 +1,82 @@
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
+    color:rgb(63,61,61);
 }
 
-ul {
+ul.navigationList {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: rgb(63, 61, 61);
     position: fixed;
     top: 0;
     width: 100%;
-  }
-  
-  li {
-    float: left;
-  }
-  
-  li a {
+}
+
+li.navigationListItem {
+    float: right;
+}
+
+li a.navigationLink {
     font-family: Arial;
+    font-style: italic;
+    font-weight: bold;
     display: block;
     color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-  }
-  
-  li a:hover:not(.active) {
-    background-color: #111;
-  }
-  
-  .active {
-    background-color: #4CAF50;
-  }
+}
 
-  .bodyDiv {
-      padding: 20px;
-      margin-top: 30px;
-      background-color: rgb(245, 245, 245);
-      height: 100vh;
-  }
+li a:hover:not(.active) {
+    background-color: #00AAAD;
+}
+
+.bodyDiv {
+    padding: 20px;
+    margin-top: 30px;
+    background-color: rgb(245, 245, 245);
+    height: 100vh;
+}
+
+.largeLogo {
+    width: 300px;
+    padding-top: 20px;
+    margin-bottom: 40px;
+}
+
+h1.pageTitle {
+    color: #00AAAD;
+    font-style: italic;
+}
+
+h2 {
+    color: #602D91;
+    font-weight: 400;
+    font-style: italic;
+}
+
+h3 {
+    color: #666666;
+    font-weight:bold;
+    font-style:italic;
+}
+
+.bttn {
+    background-color: #B2D235;
+    color: rgb(63,61,61);
+    font-size: 14px;
+    font-style: italic;
+    padding: 10px 20px;
+}
+
+.link {
+    color:#602D91;
+    text-decoration: none;
+}
+
+.musicIntro {
+    margin-bottom: 20px;
+}

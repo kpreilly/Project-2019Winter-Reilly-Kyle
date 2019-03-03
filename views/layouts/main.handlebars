@@ -5,17 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./stylesheets/styles.css">
+    <link rel="icon" type="image/ico" href="./images/favicon.ico">
     <title>{{title}}</title>
 </head>
 <body>
     {{!-- Nav Bar --}}
-    <ul>
-        <li><a href="/" value="Home">Home</a></li>
-        <li><a href="/programming">Programming</a></li>
-        <li><a href="/music">Music</a></li>
-        <li><a href="/funThings">Fun</a></li>
+    <ul class="navigationList">
+        <li class="navigationListItem"><a class="navigationLink" href="/funThings">Fun</a></li>
+        <li class="navigationListItem"><a class="navigationLink" href="myMusic">Music</a></li>
+        <li class="navigationListItem"><a class="navigationLink" href="/programming">Programming</a></li>
+        <li class="navigationListItem"><a class="navigationLink" href="/" value="Home">Home</a></li>
     </ul>
     <div class="bodyDiv">
+        <img class="largeLogo" src="./images/KR_Logo_large.svg" alt="Logo">
         {{{body}}}
     </div>
 </body>

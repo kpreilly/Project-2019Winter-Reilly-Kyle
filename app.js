@@ -25,14 +25,13 @@ app.get('/funThings',function(req,res){
     res.render('otherFunThings',{title:'Fun Things'});
 });
 
-
-app.get('/music',function(req,res){
-    res.render('music',{title:'Music'});
-});
-
 app.get('/programming',function(req,res){
     res.render('programming',{title:'Programming'});
 });
+
+app.get('/myMusic',function(req,res) {
+    res.render('myMusic',{title:'Music'});
+})
 /* Error Processing */
 
 app.use(function(req,res){
