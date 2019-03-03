@@ -7,32 +7,13 @@
 <h2>Let's Hear It...</h2>
 
 <ul id="musicPlayer">
+    {{#each songs}}
     <li>
-        <audio src="./music/Cleveland.mp3" controls>Your browser doesn't support the audio element.</audio>
+        <audio src={{this.song}} controls>Your browser doesn't support the audio element.</audio>
         <span class="mpSongCompleteBlock">
-            <span class="mpInfoSpan"><span class="mpSongBand">Hva</span></span> 
-            <span class="mpInfoSpan"><span class="mpSongTitle">Cleveland</span></span>
+            <span class="mpInfoSpan"><span class="mpSongBand">{{this.band}}</span></span> 
+            <span class="mpInfoSpan"><span class="mpSongTitle">{{this.title}}</span></span>
         </span>
     </li>
-    <li>
-        <audio src="./music/Sacred And Profane.mp3" controls>Your browser doesn't support the audio element.</audio>
-        <span class="mpSongCompleteBlock">
-            <span class="mpInfoSpan"><span class="mpSongBand">Hva</span></span> 
-            <span class="mpInfoSpan"><span class="mpSongTitle">Sacred And Profane</span></span>
-        </span>
-    </li>
-    <li>
-        <audio src="./music/Snake At The Altar.mp3" controls>Your browser doesn't support the audio element.</audio>
-        <span class="mpSongCompleteBlock">
-            <span class="mpInfoSpan"><span class="mpSongBand">Love Ritual</span></span> 
-            <span class="mpInfoSpan"><span class="mpSongTitle">Snek At The Altar</span></span>
-        </span>
-    </li>
-    <li>
-        <audio src="./music/Talk About It.mp3" controls>Your browser doesn't support the audio element.</audio>
-        <span class="mpSongCompleteBlock">
-            <span class="mpInfoSpan"><span class="mpSongBand">Love Ritual</span></span> 
-            <span class="mpInfoSpan"><span class="mpSongTitle">Talk Aboot It</span></span>
-        </span>
-    </li>
+    {{/each}}
 </ul>

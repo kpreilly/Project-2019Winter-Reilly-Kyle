@@ -30,13 +30,39 @@ app.get('/programming',function(req,res){
 });
 
 app.get('/myMusic',function(req,res) {
-    res.render('myMusic',{title:'Music'});
-})
+    var musicInfo = {
+        title: 'Music',
+        songs: [
+            {
+                band: 'Hva',
+                title: 'Cleveland',
+                song: './music/Cleveland.mp3'
+            },
+            {
+                band: 'Hva',
+                title: 'Sacred And Profane',
+                song: './music/Sacred_And_Profane.mp3'
+            },
+            {
+                band: 'Love Ritual',
+                title: 'Snek At The Altar',
+                song: './music/Snake_At_The_Altar.mp3'
+            },
+            {
+                band: 'Love Ritual',
+                title: 'Talk About It',
+                song: './music/Talk_About_It.mp3'
+            }
+        ]
+    };
+    res.render('myMusic',musicInfo);
+});
+
 /* Error Processing */
 
 app.use(function(req,res){
     res.status(404);
-    res.render('404',{title:'404 Error'});
+    res.render('404',{title:'404 - Page Not Found'});
 });
 
 app.use(function(err, req, res, next){
@@ -46,5 +72,6 @@ app.use(function(err, req, res, next){
 });
 
 app.listen(app.get('port'), function(){
-    console.log('Express started on localhost:' + app.get('port') + '; press Ctrl-C to abort.');
+    console.log('Express started on localhost:' + 
+    app.get('port') + '; press Ctrl-C to abort.');
 });
