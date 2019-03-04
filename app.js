@@ -23,6 +23,8 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(session({secret:'randpassString'}));
 app.set('port',60005);
 
+window.onresize = () => {location.reload()};
+
 /* Routes */
 
 app.get('/',function(req,res){
