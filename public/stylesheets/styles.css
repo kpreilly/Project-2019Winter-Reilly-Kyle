@@ -10,6 +10,11 @@ body p {
     margin-left: 20px;
 }
 
+a {
+    text-decoration: none;
+    color: #602D91;
+}
+
 ul.navigationList {
     list-style-type: none;
     margin: 0;
@@ -19,6 +24,7 @@ ul.navigationList {
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 1;
 }
 
 li {
@@ -138,4 +144,107 @@ h3 {
     font-size: 22px;
     font-style: italic;
     color: #F15A22;
+}
+
+/* Carousel Styling */
+
+.carousel {
+    position: relative;
+    height: 600px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.carousel__slide__img-container {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel__image {
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel__button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    cursor: pointer;
+    font-size: 20px;
+    text-align: center;
+    border: 0;
+}
+
+.carousel__button--left {
+    left: -40px;
+}
+
+.carousel__button--right {
+    right: -40px;
+}
+
+.carousel__track-container {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel__track {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    height: 100%;
+    list-style: none;
+    transition: transform 250ms ease-in;
+}
+
+.carousel__slide {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.carousel__nav {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.carousel__indicator {
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background: #602D91;
+    margin: 0 7px;
+    cursor: pointer;
+}
+
+.carousel__indicator.current-slide {
+    background: #00AAAD;
+}
+
+.carousel__indicator.not-selected {
+    background: #602D91;
+}
+
+.is-hidden { display: none; }
+
+/* Programming styles  */
+.programming-links {
+}
+
+
+#programming__email-input {
+    width: 275px;
+    height: 20px;
+}
+
+/* otherFunThings styles */
+
+.fun_body {
+    margin-left: 10px;
 }

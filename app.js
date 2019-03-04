@@ -1,3 +1,10 @@
+/*
+    TODO:
+        ___ Need a scroll box containing information, with scrollbar
+        ___ CV download button (can open in new tab or be downloaded)
+        ___ Link to my personal linkedin
+*/
+
 var express = require('express');
 var app = express();
 var handlebars = require('express-handlebars').create({defaultLayout:'main'});
@@ -18,7 +25,33 @@ app.set('port',60001);
 /* Routes */
 
 app.get('/',function(req,res){
-    res.render('index',{title:'Home Page',heading:'Home Page'});
+    loc = '/images/carouselImages/'
+    var context = {
+        title: 'Home Page',
+        imgs: [
+            {
+                file: loc+'skateboardOnRoad.jpg',
+                pos: '1'
+            },
+            {
+                file: loc+'darkBar.jpg',
+                pos: '2'
+            },
+            {
+                file: loc+'kirkwood.jpg',
+                pos: '3'
+            },
+            {
+                file: loc+'selfPortrait.jpg',
+                pos: '4'
+            },
+            {
+                file: loc+'sunset.jpg',
+                pos: '5'
+            }
+        ]
+    };
+    res.render('index',context);
 });
 
 app.get('/funThings',function(req,res){

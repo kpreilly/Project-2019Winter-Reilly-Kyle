@@ -1,11 +1,26 @@
-<link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
-<link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
-
-<div class="owl-carousel">
-    <div>INSERT CONTENT</div>
-</div>
-
 <h1 class="pageTitle">Welcome to my World!</h1>
-<script src="./scripts/pageCarousel.js"></script>
-<script src="./scripts/jquery.min.js"></script>
-<script src="./owlcarousel/owl.carousel.min.js"></script>
+
+
+<div class="carousel">
+    <button class="carousel__button carousel__button--left bttn is-hidden"><</button>
+    <div class="carousel__track-container">
+        <ul class="carousel__track">
+            {{#each imgs}}
+            <li class="carousel__slide">
+                <div class="carousel__slide__img-container">
+                    <img class="carousel__image" src="{{this.file}}">
+                </div>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+    <button class="carousel__button carousel__button--right bttn">></button>
+    <div class="carousel__nav">
+        <button class="carousel__indicator current-slide"></button>
+        <button class="carousel__indicator"></button>
+        <button class="carousel__indicator"></button>
+        <button class="carousel__indicator"></button>
+        <button class="carousel__indicator"></button>
+    </div>
+</div>
+ <script src="/scripts/pageCarousel.js"></script>

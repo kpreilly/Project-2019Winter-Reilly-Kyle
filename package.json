@@ -7,11 +7,12 @@
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
     "express-handlebars": "^3.0.2",
-    "express-session": "^1.15.6"
+    "express-session": "^1.15.6",
+    "owl.carousel": "^2.3.4"
   },
   "devDependencies": {},
   "scripts": {
-    "start" : "nodemon app.js", 
+    "start": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Kyle Reilly",
