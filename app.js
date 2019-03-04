@@ -17,7 +17,7 @@ var path = require('path');
 app.engine('handlebars',handlebars.engine);
 app.set('view engine','handlebars');
 
-app.use('/public',express.static(path.join(__dirname,'public')));
+app.use(express.static(path.join(__dirname,'public')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(session({secret:'randpassString'}));
