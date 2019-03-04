@@ -20,7 +20,7 @@ app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(session({secret:'randpassString'}));
-app.set('port',60001);
+app.set('port',60005);
 
 /* Routes */
 
