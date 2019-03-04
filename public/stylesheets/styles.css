@@ -260,21 +260,21 @@ h3 {
 
 
 /* width */
-::-webkit-scrollbar {
+div.scroll-box::-webkit-scrollbar {
     width: 10px;
 }
 
 /* Track */
-::-webkit-scrollbar-track {
+div.scroll-box::-webkit-scrollbar-track {
     background: gb(245, 245, 245);
 }
 
 /* Handle */
-::-webkit-scrollbar-thumb {
+div.scroll-box::-webkit-scrollbar-thumb {
     background: #602D91
 }
 
 /* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
+div.scroll-box::-webkit-scrollbar-thumb:hover {
     background: #F15A22
 }
