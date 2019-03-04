@@ -10,13 +10,14 @@ var app = express();
 var handlebars = require('express-handlebars').create({defaultLayout:'main'});
 var session = require('express-session');
 var bodyParser = require('body-parser');
+var path = require('path');
 
 /* View Engine Setup */
 
 app.engine('handlebars',handlebars.engine);
 app.set('view engine','handlebars');
 
-app.use(express.static(__dirname + '/public'));
+app.use('/public',express.static(path.join(__dirname,'public')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(session({secret:'randpassString'}));
