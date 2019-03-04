@@ -247,4 +247,34 @@ h3 {
 
 .fun_body {
     margin-left: 10px;
+    margin-bottom: 0px;
+}
+
+.scroll-box {
+    overflow: auto;
+    margin: 0 auto;
+    width: 590px;
+    height: 600px;
+    border: dotted 10px #B2D235;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: gb(245, 245, 245);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #602D91
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #F15A22
 }
